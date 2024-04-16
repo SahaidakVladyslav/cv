@@ -71,12 +71,12 @@ button:focus-visible {
 @media screen and (min-width: 280px) {
 .chairman {
     height: 100vh;
-  width: 250px;
+    width: 250px;
     position: fixed;
-      padding-left: 15px;
-      padding-right: 15px;
-      top: 0;
-      left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 0;
+    left: 0;
 }
   .navigation {
     display: flex;
@@ -87,26 +87,31 @@ button:focus-visible {
       height: 10px;
     }
 .nav__list {
-  transform: rotateX(0deg);
-transition: transform 0.3s ease;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.01);
+  transform: translateY(-120vh);
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .none {
-    padding-left: 15px;
-      padding-right: 15px;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(255, 255, 255, 0.87);
-      transform: rotateX(-90deg);
-      transform-origin: top;
-      transition: transform 0.3s ease;
-      margin: 0 auto;
+  transform: translateY(5vh);
 }
-    .btn__day { 
+/* не втратить */
+    .btn__lang { 
       margin-left: auto;
       width: 25px;
       height: 25px;
-      background-color: black;
+      border-color: black;
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
     }
     .btn__menu {
       width: 25px;
