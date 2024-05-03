@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import burgerModal from './js/Modal'
 import {btnLang} from './js/index'
@@ -10,10 +8,10 @@ burgerModal()
 btnLang()
 
 function App() {
-  const [language, setLanguage] = useState('en'); // Додаємо стан для мови
+  const [language, setLanguage] = useState('en'); 
 
   const handleLanguageChange = () => {
-    setLanguage(language === 'en' ? 'dk' : 'en'); // Змінюємо мову на протилежну
+    setLanguage(language === 'en' ? 'dk' : 'en'); 
   };
 
   return (
@@ -26,27 +24,31 @@ function App() {
           <ul className='nav__list '>
             <li className="nav__item">
               <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-                Home
+                {language === 'en' ? `Home` : `Hjem`}
               </a>
             </li>
             <li className="nav__item">
               <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-                {language === 'en' ? `About me` : `om mig`}
+                {language === 'en' ? `About me` : `Om mig`}
               </a>
             </li>
             <li className="nav__item">
               <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-                Portfolio
+                {language === 'en' ? `Portfolio` : `Portefølje`}
               </a>
             </li>
             <li className="nav__item">
               <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-                Contact me
+                {language === 'en' ? `Contact me` : `Kontakt mig`}
               </a>
             </li>
           </ul>
-          <button className='btn__lang' onClick={handleLanguageChange}> {language === 'en' ? 'dk' : 'en'} </button>
-          <button className='btn__menu'>  </button>
+          <button className='btn__lang' onClick={handleLanguageChange}> {language === 'en' ? 'en' : 'dk' } </button>
+          <button className='btn__menu'>
+
+
+
+          </button>
         </nav>
       </header>
       <main className='general'></main>
@@ -54,6 +56,7 @@ function App() {
     </>
   );
 }
+
 
 
 export default App;

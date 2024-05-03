@@ -115,7 +115,9 @@ button:focus-visible {
     }
     .btn__menu {
       width: 25px;
-        height: 25px;
-        background-color: green;
+      height: 25px;
+      background-color: #535bf2;
+
     }
+
 }
