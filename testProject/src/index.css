@@ -1,4 +1,8 @@
 :root {
+
+  --day-theme: #f9f9f9;
+  --night-theme: #242424;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -30,6 +34,7 @@ body {
   place-items: center;
 
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -70,15 +75,18 @@ button:focus-visible {
 
 @media screen and (min-width: 280px) {
 .chairman {
+  display: block;
+
     height: 100vh;
-    width: 250px;
+    width: 90vw;
     position: fixed;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     top: 0;
     left: 0;
 }
   .navigation {
+
     display: flex;
   }
 
@@ -102,7 +110,7 @@ button:focus-visible {
 .none {
   transform: translateY(5vh);
 }
-/* не втратить */
+
     .btn__lang { 
       margin-left: auto;
       width: 25px;
@@ -116,8 +124,34 @@ button:focus-visible {
     .btn__menu {
       width: 25px;
       height: 25px;
-      background-color: #535bf2;
+      margin-left: 5px;
+      position: relative; 
 
     }
+    .svg__menu {
+      max-width: 25px;
+      max-height: 25px;
+      position: absolute;
+      fill: #f9f9f9;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
+    .theme--moon,
+    .theme--sun {
+      margin-left: 5px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #f9f9f9;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+}
+.night-theme {
+  background-color: var(--night-theme);
+}
+.sun-theme{ 
+  background-color: var(--day-color);
 }

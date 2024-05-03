@@ -1,17 +1,12 @@
-export function btnLang() {
-    document.querySelector('body').addEventListener('click', (event) => {
+export function themeColor() {
+    const moon = document.querySelector('.theme--moon')
+    const sun = document.querySelector('.theme--sun')
+    sun.addEventListener('click',(event)=> {
+return document.querySelector('body').classList.toggle('sun-theme')
+    })
 
-        const btnLangEl = document.querySelector('.btn__lang');
 
-        if (!event.target.classList.contains('btn__lang')) return;
-
-        if (btnLangEl.textContent === 'dk') {
-
-            return btnLangEl.textContent = 'en'
-        } else {
-
-            return btnLangEl.textContent = 'dk';
-        }
-
-    });
 }
+
+// .night-theme 
+// .sun-theme
