@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import burgerModal from './js/Modal'
-import {themeColor} from './js/index'
 
-
-burgerModal()
 function App() {
   const [language, setLanguage] = useState('en'); 
 
@@ -47,8 +43,8 @@ function App() {
           <svg className='svg__menu'><use className='svg__menu--use' href="./src/assets/react.svg#menu"></use></svg>
 
           </button>
-          <img className='theme--moon' src="./src/assets/moon.png" alt="moon" />
-          <img className='theme--sun' src="./src/assets/sun.png" alt="sun" />
+          <img className='theme--moon display--none' src="./src/assets/moon.png" alt="moon" />
+          <img className='theme--sun ' src="./src/assets/sun.png" alt="sun" />
 
         </nav>
       </header>
