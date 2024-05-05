@@ -2,14 +2,17 @@
 
   --day-theme: #f9f9f9;
   --night-theme: #242424;
+  --red-color: #a01b1b;
+  --blue-hover: #646cff;
+
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +25,7 @@ img {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--blue-hover);
   text-decoration: inherit;
 }
 a:hover {
@@ -56,7 +59,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--blue-hover);
 }
 button:focus,
 button:focus-visible {
@@ -88,7 +91,7 @@ button:focus-visible {
     padding-right: 5vw;
     top: 0;
     left: 0;
-}
+    }
   .navigation {
 
     display: flex;
@@ -104,7 +107,7 @@ button:focus-visible {
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.01);
-  transform: translateY(-120vh);
+  transform: translateY(-130vh);
   transition: transform 0.3s ease;
   position: absolute;
   top: 0;
@@ -112,70 +115,93 @@ button:focus-visible {
 }
 
 .none {
-  transform: translateY(5vh);
+  transform: translateY(10vh);
 }
 
     .btn__lang { 
       margin-left: auto;
       width: 25px;
       height: 25px;
-      border-color: black;
+      color: #000;
+      border-color: #000;
       display: flex;
       justify-content: center;
       flex-direction: column-reverse;
       align-items: center;
     }
-    .btn__menu {
-      width: 25px;
-      height: 25px;
-      margin-left: 5px;
-      position: relative; 
 
-    }
-    .svg__menu {
-      max-width: 25px;
-      max-height: 25px;
-      position: absolute;
-      fill: #f9f9f9;
-      transform: translate(-40%, -40%);
-      
-    }
+
 
 
 
 }
+
+.btn__menu {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  position: relative; 
+  border-color: black;
+}
+
+.svg__menu {
+  max-width: 25px;
+  max-height: 25px;
+  position: absolute;
+  fill: #f9f9f9;
+  transform: translate(-40%, -40%);
+}
+
+
+
+
 .night-theme {
   background-color: var(--night-theme);
 }
 .sun-theme{ 
   background-color: var(--day-color) ;
 }
+.sun-theme .btn__menu {
+  background-color: var(--red-color);
+}
 
-
-.theme--moon,
-.theme--sun {
+.theme--moon--png,
+.theme--sun--png {
   margin-left: 5px;
   width: 25px;
   height: 25px;
   border: 1px solid #f9f9f9;
   border-radius: 15px;
   cursor: pointer;
-  transform-origin: center center; /* Задаємо точку обертання в центр елемента */
+  transform-origin: center center; 
 }
-
+  .theme--sun--png {
+    background-color: #ab1ee8;
+    border: 1px solid #9a0000;
+  }
 @keyframes rotateSun {
   from {
-    transform: rotate(0deg); /* Початкова позиція обертання */
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg); /* Кінцева позиція обертання */
+    transform: rotate(360deg); 
   }
 }
 
-.theme--moon:hover,
-.theme--sun:hover {
-  animation: rotateSun 5s linear infinite; /* Анімація обертання */
+.theme--moon--png:hover,
+.theme--sun--png:hover {
+  animation: rotateSun 5s linear infinite;
 }
+
+.btn--flag--dk{ 
+  background-image: url("https://www.norden.org/sites/default/files/styles/content_size_800/public/images/Dansk%2520flag383594.jpeg?itok=CNnL0vpT");
+  background-size: cover;
+}
+.btn--flag--uk {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg");
+  background-size: cover;
+}
+
 
 
 .display--none {

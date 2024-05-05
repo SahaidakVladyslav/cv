@@ -13,7 +13,7 @@ function App() {
       <header className='chairman'>
         <nav className='navigation'>
           <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-            Vlad
+            Vladyslav Sahaidak
           </a>
           <ul className='nav__list '>
             <li className="nav__item">
@@ -31,20 +31,20 @@ function App() {
                 {language === 'en' ? `Portfolio` : `Portefølje`}
               </a>
             </li>
-            <li className="nav__item">
+            <li className="nav__item asd">
               <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
                 {language === 'en' ? `Contact me` : `Kontakt mig`}
               </a>
             </li>
           </ul>
-          <button className='btn__lang' onClick={handleLanguageChange}> {language === 'en' ? 'en' : 'dk' }  </button>
+          <button className='btn__lang btn--flag--uk' id='flag' onClick={handleLanguageChange}> {language === 'en' ? 'en' : 'dk' }  </button>
           <button className='btn__menu'>
 
           <svg className='svg__menu'><use className='svg__menu--use' href="./src/assets/react.svg#menu"></use></svg>
 
           </button>
-          <img className='theme--moon display--none' src="./src/assets/moon.png" alt="moon" />
-          <img className='theme--sun ' src="./src/assets/sun.png" alt="sun" />
+          <img className='theme--moon--png display--none' src="./src/assets/moon.png" alt="moon" />
+          <img className='theme--sun--png' src="./src/assets/sun.png" alt="sun" />
 
         </nav>
       </header>
