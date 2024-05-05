@@ -13,7 +13,7 @@ function App() {
       <header className='chairman'>
         <nav className='navigation'>
           <a className='nav__link' href="#"  target="_blank" rel="noopener noreferrer">
-            Vladyslav Sahaidak
+            Vladyslav <span className='nav__link--span'>Sahaidak</span>
           </a>
           <ul className='nav__list '>
             <li className="nav__item">
