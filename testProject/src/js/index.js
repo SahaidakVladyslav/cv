@@ -41,7 +41,6 @@ export function themeColor() {
 
             dataFromStorage.theme = 'white';
             localStorage.setItem(keyLocalStorage, JSON.stringify(dataFromStorage));
-            console.log('local::: ', localStorage.getItem(keyLocalStorage));
         } else {
             turnOf()
             sunEl.classList.add('display--none');
@@ -49,7 +48,6 @@ export function themeColor() {
 
             dataFromStorage.theme = 'black';
             localStorage.setItem(keyLocalStorage, JSON.stringify(dataFromStorage));
-            console.log('local::: ', localStorage.getItem(keyLocalStorage));
         }
     });
 }
